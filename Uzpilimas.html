@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GranKes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: rgb(223, 223, 167);
+        }
+    </style>
+    <a href="index.html">
+        <img src="nams.png" alt="pagrindinis" style="width: 50px;height: 50px;">
+    </a>
+    <h1>Užpilimas</h1>
+    <ul>
+        <a href="Pirkimas.html">
+            <img src="Kuras.png" alt="pirkimas" style="max-width: 180px; max-height: 180px;">
+        </a>
+        <a href="Uzpilimas.html">
+            <img src="Katils.png" alt="uzpilimas" style="max-width: 180px; max-height: 180px;">
+        </a>
+    </ul>
+
+    <h2>Čia suvedu naujai įpilto kuro duomenys</h2>
+    <form id="forma" onsubmit="issaugotiDuomenis(); return false;">
+        <label for="data">Data:</label>
+        <input type="date" id="data" required><br><br>
+
+        <label for="uzpiltaKg">Užpilta (kg):</label>
+        <input type="number" id="uzpiltaKg" placeholder="Užkrautas kiekis kg" required><br><br>
+
+        <label for="likoKg">Liko (kg):</label>
+        <input type="number" id="likoKg" placeholder="Įveskite kiekį kg" required><br><br>
+
+        <label for="temperatura">Temperatūra lauke (°C):</label>
+        <input type="number" id="temperatura" placeholder="Oro temperatura °C" required><br><br>
+
+        <button type="submit">Išsaugoti</button>
+    </form>
+
+    <script>
+        function issaugotiDuomenis() {
+            // Paimam ivestus duomenis
+            const data = document.getElementById("data").value;
+            const uzpiltaKg = document.getElementById("uzpiltaKg").value;
+            const likoKg = document.getElementById("likoKg").value;
+            const temperatura = document.getElementById("temperatura").value;
+
+            // Sukuriam objekta duomenims
+            const irasas = { data, uzpiltaKg, likoKg, temperatura };
+
+            // Pasiimam jau esamus irasus is localStorage
+            let irasai = JSON.parse(localStorage.getItem("irasai")) || [];
+
+            // Pridedam nauja irasa
+            irasai.push(irasas);
+
+            // Issaugom atnaujintus duomenis i localStorage
+            localStorage.setItem("irasai", JSON.stringify(irasai));
+
+            // Einam i index.html
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GranKes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: rgb(214, 233, 144);
+        }
+    </style>
+    <a href="index.html">
+        <img src="nams.png" alt="pagrindinis" style="width: 50px;height: 50px;">
+    </a>
+    <h1>"GranKes" :)</h1>
+    <ul>
+        <a href="Pirkimas.html">
+            <img src="Kuras.png" alt="pirkimas" style="max-width: 180px; max-height: 180px;">
+        </a>
+        <a href="Uzpilimas.html">
+            <img src="Katils.png" alt="uzpilimas" style="max-width: 180px; max-height: 180px;">
+        </a>
+    </ul>
+    <h2>Žemiau matote Kęsto kuro granulių suvartojimo suvestinę</h2>
+    <table border="1" cellspacing="0" cellpadding="5">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Užpilta (kg)</th>
+                <th>Liko (kg)</th>
+                <th>Temperatūra lauke (°C)</th>
+            </tr>
+        </thead>
+        <tbody id="lentele">
+            <!-- irasu iterpims -->
+        </tbody>
+    </table>
+
+    <script>
+        // Pasiimam duomenis is localStorage
+        const irasai = JSON.parse(localStorage.getItem("irasai")) || [];
+        const lentele = document.getElementById("lentele");
+
+        // Iteruojam per kiekviena irasa ir pridedam  i lentele
+        irasai.forEach(irasas => {
+            const eilute = document.createElement("tr");
+
+            // Sukuriam eilutes
+            eilute.innerHTML = `
+                <td>${irasas.data}</td>
+                <td>${irasas.uzpiltaKg}</td>
+                <td>${irasas.likoKg}</td>
+                <td>${irasas.temperatura}</td>
+            `;
+
+            // Pridedam eilute i lentele
+            lentele.appendChild(eilute);
+        });
+    </script>
+</body>
+
+</html>
