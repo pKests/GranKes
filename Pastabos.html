@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GranKes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: rgb(226, 190, 147);
+            font-family: Arial, sans-serif;
+            /* margin: 40px; */
+            align-items: center;
+        }
+            textarea {
+                margin: 30px;
+                justify-items: center;
+                width: 100%;
+                height: 130px;
+                padding: 10px;
+                font-size: 16px;
+                border: 1px solid #68dd39;
+                border-radius: 5px;
+            }
+    </style>
+    <a href="index.html">
+        <img src="nams.png" alt="pagrindinis" style="width: 50px;height: 50px;">
+    </a>
+    <h1>Pastabos</h1>
+    <ul>
+        <a href="Pastabos.html">
+            <img src="Kuras.png" alt="pastabos" style="max-width: 180px; max-height: 180px;">
+        </a>
+        <a href="Uzpilimas.html">
+            <img src="Katils.png" alt="uzpilimas" style="max-width: 180px; max-height: 180px;">
+        </a>
+    </ul>
+    <!-- <h2>Čia suvedu nupirkto kuro duomenis</h2> -->
+    <form></form>
+    <!-- <label for="pastabos">Pastabos</label><br><br> -->
+    <textarea id="pastabos" name="pastabos" placeholder="Rašykite savo pastabas čia..."></textarea>
+    </form>
+
+    <script>
+        // Ikeliu pastabas is localStorage
+        document.getElementById("pastabos").value = localStorage.getItem("pastabos") || "";
+
+        // irasau pastabas i localStorage
+        document.getElementById("pastabos").addEventListener("input", function () {
+            localStorage.setItem("pastabos", this.value);
+        });
+    </script>
+</body>
+
+</html>

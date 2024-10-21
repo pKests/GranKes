@@ -9,7 +9,13 @@ table {
     border: 2px solid #68dd39; /* Remelis aplink nuoroda */
     border-radius: 10px; /* Uzapvalinti kampai */
 }
-
+textarea  {
+    border-collapse: collapse;
+    width: 100%;  
+        max-width: calc(100% - 100px); /* Max plotis su per puse px is apieju pusiu */
+    text-align: left;
+    margin: 0 50px;
+}
 ul {
     padding: 0;
 }
