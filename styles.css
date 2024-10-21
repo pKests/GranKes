@@ -6,8 +6,8 @@ body {
 /* Lenteles nustatymai */
 table {
     margin: 0 auto;
-    border: 2px solid #68dd39; /* Rėmelis aplink nuorodą */
-    border-radius: 5px; /* Užapvalinti kampai */
+    border: 2px solid #68dd39; /* Remelis aplink nuoroda */
+    border-radius: 10px; /* Uzapvalinti kampai */
 }
 
 ul {
@@ -17,12 +17,11 @@ ul {
 a {
     display: inline-block;
     padding: 2px 2px;
-    text-decoration: none; /* Pašaliname pabraukimą */
-    border: 2px solid #68dd39; /* Rėmelis aplink nuorodą */
-    border-radius: 5px; /* Užapvalinti kampai */
-    transition: transform 0.3s ease; /* Sklandus perėjimas */
+    border: 2px solid #68dd39; /* remelis aplink <a> */
+    border-radius: 5px; /* uzapvalinu */
+    transition: transform 0.3s ease; /*  perejims */
 }
 
 a:hover {
-    transform: scale(1.1); /* Padidėja 10%, kai užvedama pele */
+    transform: scale(1.1); /* Padidėj, kai uzvedu pele */
 }
