@@ -12,12 +12,12 @@ table {
     border-radius: 10px;
     /* Uzapvalinti kampai nors nelabai matos man, bet palieku */
 }
-/* pastabu laukas */
+/* pastabu lauks */
 textarea {
     border-collapse: collapse;
     width: 100%;
     max-width: calc(100% - 100px);
-    /* Max plotis su per puse px is apieju pusiu */
+    /* Max plotis su per pus px is apieju pusiu */
     text-align: left;
     margin: 0 50px;
     background-color: rgb(255, 216, 157);
@@ -28,7 +28,7 @@ ul {
     padding: 0;
 }
 
-/* Paturbinsiu <a> tagus */
+/* Paturbin <a> tagus */
 a {
     display: inline-block;
     padding: 2px 2px;

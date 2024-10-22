@@ -46,25 +46,25 @@
 
     <script>
         function issaugotiDuomenis() {
-            // Paimu ivestus duomenis
+            // Paim ivestus duomenis
             const data = document.getElementById("data").value;
             const uzpiltaKg = document.getElementById("uzpiltaKg").value;
             const likoKg = document.getElementById("likoKg").value;
             const temperatura = document.getElementById("temperatura").value;
 
-            // Sukuriu objekta duomenims
+            // Sukur objekta duomenim
             const irasas = { data, uzpiltaKg, likoKg, temperatura };
 
-            // Pasiimu jau esamus irasus is localStorage
+            // Pasiim jau esamus irasus is localStorage
             let irasai = JSON.parse(localStorage.getItem("irasai")) || [];
 
-            // Pridedu nauja irasa
+            // Prided nauja irasa
             irasai.push(irasas);
 
-            // Issaugau atnaujintus duomenis i localStorage
+            // Issauga atnaujintus duomenis i localStorage
             localStorage.setItem("irasai", JSON.stringify(irasai));
 
-            // Einu i index.html
+            // nuved i index.html
             window.location.href = "index.html";
         }
     </script>

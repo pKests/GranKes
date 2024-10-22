@@ -19,7 +19,7 @@
             margin: 30px;
             justify-items: center;
             width: 100%;
-            height: 160px;
+            height: 150px;
             padding: 10px;
             font-size: 16px;
             border: 1px solid #68dd39;
@@ -45,10 +45,10 @@
     </form>
 
     <script>
-        // Ikeliu pastabas is localStorage
+        // Ikel pastabas is localStorage
         document.getElementById("pastabos").value = localStorage.getItem("pastabos") || "";
 
-        // irasau pastabas i localStorage
+        // irasa pastabas i localStorage
         document.getElementById("pastabos").addEventListener("input", function () {
             localStorage.setItem("pastabos", this.value);
         });

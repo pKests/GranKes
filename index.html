@@ -42,15 +42,15 @@
     </table>
 
     <script>
-        // Pasiimam duomenis is localStorage
+        // Pasiim duomenis is localStorage
         const irasai = JSON.parse(localStorage.getItem("irasai")) || [];
         const lentele = document.getElementById("lentele");
 
-        // pereinam per kiekviena irasa ir pridedam  i lentele
+        // perein per kiekviena irasa ir prided  i lentele
         irasai.forEach(irasas => {
             const eilute = document.createElement("tr");
 
-            // Sukuriam eilute
+            // Sukur eilute
             eilute.innerHTML = `
                 <td>${irasas.data}</td>
                 <td>${irasas.uzpiltaKg}</td>
@@ -58,7 +58,7 @@
                 <td>${irasas.temperatura}</td>
             `;
 
-            // Pridedam eilute i lentele
+            // Prided eilute i lentele
             lentele.appendChild(eilute);
         });
     </script>
