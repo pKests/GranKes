@@ -20,10 +20,10 @@
     <h1>"GranKes"&#9786;</h1>
     <ul>
         <a href="Pastabos.html">
-            <img src="Kuras.png" alt="pastabos" style="max-width: 180px; max-height: 180px;">
+            <img src="notes.png" alt="pastabos" style="max-width: 170px; max-height: 170px;">
         </a>
         <a href="Uzpilimas.html">
-            <img src="Katils.png" alt="uzpilimas" style="max-width: 180px; max-height: 180px;">
+            <img src="Katils.png" alt="uzpilimas" style="max-width: 170px; max-height: 170px;">
         </a>
     </ul>
     <h2>Žemiau matote Kęsto kuro granulių suvartojimo suvestinę</h2>
@@ -46,11 +46,11 @@
         const irasai = JSON.parse(localStorage.getItem("irasai")) || [];
         const lentele = document.getElementById("lentele");
 
-        // Iteruojam per kiekviena irasa ir pridedam  i lentele
+        // pereinam per kiekviena irasa ir pridedam  i lentele
         irasai.forEach(irasas => {
             const eilute = document.createElement("tr");
 
-            // Sukuriam eilutes
+            // Sukuriam eilute
             eilute.innerHTML = `
                 <td>${irasas.data}</td>
                 <td>${irasas.uzpiltaKg}</td>
