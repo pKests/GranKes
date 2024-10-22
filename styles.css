@@ -3,31 +3,44 @@ h2,
 body {
     text-align: center;
 }
+
 /* Lenteles nustatymai */
 table {
     margin: 0 auto;
-    border: 2px solid #68dd39; /* Remelis aplink nuoroda */
-    border-radius: 10px; /* Uzapvalinti kampai */
+    border: 2px solid #68dd39;
+    /* Remelis aplink nuoroda */
+    border-radius: 10px;
+    /* Uzapvalinti kampai nors nelabai matos man, bet palieku */
 }
-textarea  {
+/* pastabu laukas */
+textarea {
     border-collapse: collapse;
-    width: 100%;  
-        max-width: calc(100% - 100px); /* Max plotis su per puse px is apieju pusiu */
+    width: 100%;
+    max-width: calc(100% - 100px);
+    /* Max plotis su per puse px is apieju pusiu */
     text-align: left;
     margin: 0 50px;
+    background-color: rgb(255, 216, 157);
+    font-family: Arial, Helvetica, sans-serif;
 }
+
 ul {
     padding: 0;
 }
+
 /* Paturbinsiu <a> tagus */
 a {
     display: inline-block;
     padding: 2px 2px;
-    border: 2px solid #68dd39; /* remelis aplink <a> */
-    border-radius: 5px; /* uzapvalinu */
-    transition: transform 0.3s ease; /*  perejims */
+    border: 2px solid #68dd39;
+    /* remelis aplink <a> */
+    border-radius: 5px;
+    /* uzapvalinu */
+    transition: transform 0.3s ease;
+    /*  perejims */
 }
 
 a:hover {
-    transform: scale(1.1); /* Padidėj, kai uzvedu pele */
+    transform: scale(1.1);
+    /* Padidėj, kai uzvedu pele */
 }

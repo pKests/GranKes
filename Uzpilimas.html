@@ -27,7 +27,7 @@
         </a>
     </ul>
 
-    <h2>Čia suvedu naujai įpilto kuro duomenys</h2>
+    <h2>Čia duomenys apie naują pakurą</h2>
     <form id="forma" onsubmit="issaugotiDuomenis(); return false;">
         <label for="data">Data:</label>
         <input type="date" id="data" required><br><br>
@@ -46,25 +46,25 @@
 
     <script>
         function issaugotiDuomenis() {
-            // Paimam ivestus duomenis
+            // Paimu ivestus duomenis
             const data = document.getElementById("data").value;
             const uzpiltaKg = document.getElementById("uzpiltaKg").value;
             const likoKg = document.getElementById("likoKg").value;
             const temperatura = document.getElementById("temperatura").value;
 
-            // Sukuriam objekta duomenims
+            // Sukuriu objekta duomenims
             const irasas = { data, uzpiltaKg, likoKg, temperatura };
 
-            // Pasiimam jau esamus irasus is localStorage
+            // Pasiimu jau esamus irasus is localStorage
             let irasai = JSON.parse(localStorage.getItem("irasai")) || [];
 
-            // Pridedam nauja irasa
+            // Pridedu nauja irasa
             irasai.push(irasas);
 
-            // Issaugom atnaujintus duomenis i localStorage
+            // Issaugau atnaujintus duomenis i localStorage
             localStorage.setItem("irasai", JSON.stringify(irasai));
 
-            // Einam i index.html
+            // Einu i index.html
             window.location.href = "index.html";
         }
     </script>
